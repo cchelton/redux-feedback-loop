@@ -75,7 +75,7 @@ router.delete("/delete/:id", (req, res) => {
 
 router.put("/flag/:id", (req, res) => {
   const reqID = req.params.id;
-  const queryText = `UPDATE "feedback" SET "flagged" = (!"flagged") WHERE "id" = $1;`;
+  const queryText = `UPDATE "feedback" SET "flagged" = NOT "flagged" WHERE "id" = $1;`;
 
   pool
     .query(queryText, [reqID])
