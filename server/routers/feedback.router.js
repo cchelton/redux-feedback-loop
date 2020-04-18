@@ -2,6 +2,9 @@ const express = require("express");
 const router = express.Router();
 const pool = require("../modules/pool");
 
+//
+//  GET ROUTE
+
 router.get("/", (req, res) => {
   console.log(`In /feedback GET`);
 
@@ -16,6 +19,9 @@ router.get("/", (req, res) => {
       res.sendStatus(500);
     });
 });
+
+//
+//  POST ROUTE
 
 router.post("/", (req, res) => {
   console.log(`In /feedback POST`);
@@ -42,6 +48,24 @@ router.post("/", (req, res) => {
     })
     .catch((err) => {
       console.log(`ERROR in POST /feedback:`, err);
+      res.sendStatus(500);
+    });
+});
+
+//
+//  DELETE ROUTE
+
+router.delete("/delete/:id", (req, res) => {
+  const reqID = req.params.id;
+  const queryText = `DELETE FROM "feedback" WHERE id=$1;`;
+  pool
+    .query(queryText, [reqID])
+    .then((response) => {
+      console.log(response);
+      res.sendStatus(200);
+    })
+    .catch((err) => {
+      console.log(`ERROR in DELETE /feedback:`, err);
       res.sendStatus(500);
     });
 });
