@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 
 class NextButton extends Component {
+  //
+  //  EVENT HANDLERS
   handleClickNext = (path) => {
     if (this.props.pageVal !== "") {
       this.props.history.push(path);
@@ -10,6 +12,9 @@ class NextButton extends Component {
       alert("This field is required");
     }
   };
+
+  //
+  //  RENDER
 
   render() {
     const nextPath = this.props.nextPath;

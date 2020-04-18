@@ -11,6 +11,8 @@ const reducer = (state = initialState, action) => {
       ...state,
       [action.payload.property]: action.payload.value,
     };
+  } else if (action.type === "RESET_NEW_FEEDBACK") {
+    return initialState;
   }
   return state;
 };

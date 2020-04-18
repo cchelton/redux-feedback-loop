@@ -2,12 +2,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import NextButton from "../../../NextButton/NextButton";
 import EditButton from "../../../EditButton/EditButton";
+import SubmitButton from "../../../SubmitButton/SubmitButton";
 
 class PageReview extends Component {
   render() {
-    const newFeedback = this.props.store.newFeedbackReducer;
+    const newFeedback = this.props.store.newFeedbackReducer; //  get the reducer so I type less
     console.log(newFeedback);
 
     return (
@@ -50,7 +50,7 @@ class PageReview extends Component {
           </tbody>
         </table>
 
-        <NextButton nextPath="/thanks" />
+        <SubmitButton />
       </div>
     );
   }
