@@ -7,12 +7,16 @@ import registerServiceWorker from "./registerServiceWorker";
 //
 //  Redux
 
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
+import logger from "redux-logger";
 
 import adminReducer from "./reducers/adminReducer";
 
-const storeInstance = createStore(combineReducers({ adminReducer }));
+const storeInstance = createStore(
+  combineReducers({ adminReducer }),
+  applyMiddleware(logger)
+);
 
 //
 //  Render
