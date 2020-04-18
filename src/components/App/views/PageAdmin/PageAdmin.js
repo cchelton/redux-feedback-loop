@@ -35,7 +35,7 @@ class PageAdmin extends Component {
     return (
       <div>
         <h2>ADMIN</h2>
-        <FeedbackTable />
+        <FeedbackTable getFeedbackSubmissions={this.getFeedbackSubmissions} />
       </div>
     );
   }

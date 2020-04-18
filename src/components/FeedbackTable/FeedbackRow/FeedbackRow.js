@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import DeleteButton from "../../DeleteButton/DeleteButton";
 
 class FeedbackRow extends Component {
   render() {
@@ -9,7 +10,12 @@ class FeedbackRow extends Component {
         <td>{this.props.support}</td>
         <td>{this.props.comments}</td>
         <td>{this.props.flagged.toString()}</td>
-        <td>DELETE</td>
+        <td>
+          <DeleteButton
+            getFeedbackSubmissions={this.props.getFeedbackSubmissions}
+            id={this.props.id}
+          />
+        </td>
       </tr>
     );
   }

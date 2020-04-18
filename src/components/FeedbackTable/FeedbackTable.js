@@ -14,6 +14,8 @@ class FeedbackTable extends Component {
           comments={item.comments}
           flagged={item.flagged}
           key={index}
+          getFeedbackSubmissions={this.props.getFeedbackSubmissions}
+          id={item.id}
         />
       );
     });
