@@ -15,26 +15,25 @@ class PageReview extends Component {
 
         <table>
           <tbody>
-              <tr>
-                <td>How are you feeling today?</td>
-                <td>{newFeedback.feeling}</td>
-              </tr>
+            <tr>
+              <td>How are you feeling today?</td>
+              <td>{newFeedback.feeling}</td>
+            </tr>
 
-              <tr>
-                <td>How well are you understanding the content?</td>
-                <td>{newFeedback.understanding}</td>
-              </tr>
+            <tr>
+              <td>How well are you understanding the content?</td>
+              <td>{newFeedback.understanding}</td>
+            </tr>
 
-              <tr>
-                <td>How well are you being supported?</td>
-                <td>{newFeedback.support}</td>
-              </tr>
+            <tr>
+              <td>How well are you being supported?</td>
+              <td>{newFeedback.support}</td>
+            </tr>
 
-              <tr>
-                <td>Did you have any comments?</td>
-                <td>{newFeedback.comments}</td>
-              </tr>
-
+            <tr>
+              <td>Did you have any comments?</td>
+              <td>{newFeedback.comments}</td>
+            </tr>
           </tbody>
         </table>
 
@@ -48,4 +47,4 @@ const putStoreOnProps = (store) => ({
   store,
 });
 
-export default withRouter(connect(putStoreOnProps)(PageReview);
+export default withRouter(connect(putStoreOnProps)(PageReview));
