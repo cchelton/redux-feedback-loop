@@ -10,7 +10,7 @@ import registerServiceWorker from "./registerServiceWorker";
 import { createStore, combineReducers } from "redux";
 import { Provider } from "react-redux";
 
-import adminReducer from "./reducers/adminFeedback";
+import adminReducer from "./reducers/adminFeedback.reducer";
 
 const storeInstance = createStore(combineReducers({ adminReducer }));
 
