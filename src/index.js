@@ -4,7 +4,25 @@ import "./index.css";
 import App from "./components/App/App";
 import registerServiceWorker from "./registerServiceWorker";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+//
+//  Redux
+
+import { createStore, combineReducers } from "redux";
+import { Provider } from "react-redux";
+
+import adminReducer from "./reducers/adminFeedback";
+
+const storeInstance = createStore(combineReducers({ adminReducer }));
+
+//
+//  Render
+
+ReactDOM.render(
+  <Provider store={storeInstance}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
+);
 registerServiceWorker();
 
 //  redux needs to hold inputs to allow for future edits.
