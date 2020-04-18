@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import axios from "axios";
 
 class DeleteButton extends Component {
+  //
+  //  SERVER API CALL / EVENT HANDLER
+
   /**
    * Deletes a feedback entry from database.
    * @param {number} id the id of the table row. from delete button props
@@ -17,6 +20,9 @@ class DeleteButton extends Component {
         console.log(err);
       });
   };
+
+  //
+  //  RENDER
 
   render() {
     return (

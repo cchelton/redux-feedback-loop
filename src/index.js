@@ -12,9 +12,13 @@ import { Provider } from "react-redux";
 import logger from "redux-logger";
 
 import adminReducer from "./reducers/adminReducer";
+import newFeedbackReducer from "./reducers/newFeedbackReducer";
 
 const storeInstance = createStore(
-  combineReducers({ adminReducer }),
+  combineReducers({
+    adminReducer,
+    newFeedbackReducer,
+  }),
   applyMiddleware(logger)
 );
 

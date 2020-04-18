@@ -3,9 +3,18 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 
 class NextButton extends Component {
+  //
+  //  EVENT HANDLERS
   handleClickNext = (path) => {
-    this.props.history.push(path);
+    if (this.props.pageVal !== "") {
+      this.props.history.push(path);
+    } else {
+      alert("This field is required");
+    }
   };
+
+  //
+  //  RENDER
 
   render() {
     const nextPath = this.props.nextPath;
