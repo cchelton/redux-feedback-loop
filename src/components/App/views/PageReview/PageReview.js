@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import NextButton from "../../../NextButton/NextButton";
+import EditButton from "../../../EditButton/EditButton";
 
 class PageReview extends Component {
   render() {
@@ -18,21 +19,33 @@ class PageReview extends Component {
             <tr>
               <td>How are you feeling today?</td>
               <td>{newFeedback.feeling}</td>
+              <td>
+                <EditButton sectionPath="/" />
+              </td>
             </tr>
 
             <tr>
               <td>How well are you understanding the content?</td>
               <td>{newFeedback.understanding}</td>
+              <td>
+                <EditButton sectionPath="/understanding" />
+              </td>
             </tr>
 
             <tr>
               <td>How well are you being supported?</td>
               <td>{newFeedback.support}</td>
+              <td>
+                <EditButton sectionPath="/support" />
+              </td>
             </tr>
 
             <tr>
               <td>Did you have any comments?</td>
               <td>{newFeedback.comments}</td>
+              <td>
+                <EditButton sectionPath="/comments" />
+              </td>
             </tr>
           </tbody>
         </table>
