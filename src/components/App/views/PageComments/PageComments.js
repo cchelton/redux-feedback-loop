@@ -8,7 +8,7 @@ class PageComments extends Component {
       <div>
         <h2>COMMENTS</h2>
         <TextInput property="comments" />
-        <NextButton nextPath="/review" />
+        <NextButton nextPath="/review" pageVal="comments" />
       </div>
     );
   }

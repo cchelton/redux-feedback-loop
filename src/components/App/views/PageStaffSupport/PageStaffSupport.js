@@ -8,8 +8,14 @@ class PageStaffSupport extends Component {
     return (
       <div>
         <h2>Staff Support</h2>
-        <RatingSelector property="support" />
-        <NextButton nextPath="/comments" />
+        <RatingSelector
+          property="support"
+          value={this.props.store.newFeedbackReducer.support}
+        />
+        <NextButton
+          nextPath="/comments"
+          pageVal={this.props.store.newFeedbackReducer.support}
+        />
       </div>
     );
   }

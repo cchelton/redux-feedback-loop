@@ -8,8 +8,14 @@ class PageUnderstanding extends Component {
     return (
       <div>
         <h2>Understanding</h2>
-        <RatingSelector property="understanding" />
-        <NextButton nextPath="/support" />
+        <RatingSelector
+          property="understanding"
+          value={this.props.store.newFeedbackReducer.understanding}
+        />
+        <NextButton
+          nextPath="/support"
+          pageVal={this.props.store.newFeedbackReducer.understanding}
+        />
       </div>
     );
   }

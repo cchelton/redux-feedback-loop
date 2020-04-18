@@ -4,7 +4,11 @@ import { withRouter } from "react-router-dom";
 
 class NextButton extends Component {
   handleClickNext = (path) => {
-    this.props.history.push(path);
+    if (this.props.pageVal !== "") {
+      this.props.history.push(path);
+    } else {
+      alert("This field is required");
+    }
   };
 
   render() {
