@@ -70,4 +70,23 @@ router.delete("/delete/:id", (req, res) => {
     });
 });
 
+//
+//  PUT ROUTE
+
+router.put("/flag/:id", (req, res) => {
+  const reqID = req.params.id;
+  const queryText = `UPDATE "feedback" SET "flagged" = (!"flagged") WHERE "id" = $1;`;
+
+  pool
+    .query(queryText, [reqID])
+    .then((response) => {
+      console.log(response);
+      res.sendStatus(200);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.sendStatus(500);
+    });
+});
+
 module.exports = router;
