@@ -1,6 +1,7 @@
 // single purpose button, do not submit, just advance. let redux hold inputs until submit
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import Button from "@material-ui/core/Button";
 
 class NextButton extends Component {
   //
@@ -20,13 +21,15 @@ class NextButton extends Component {
     const nextPath = this.props.nextPath;
 
     return (
-      <button
+      <Button
+        variant="contained"
+        color="primary"
         onClick={() => {
           this.handleClickNext(nextPath);
         }}
       >
         Next
-      </button>
+      </Button>
     );
   }
 }
