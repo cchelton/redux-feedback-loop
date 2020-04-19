@@ -1,0 +1,12 @@
+.Card {
+  display: inline-block;
+  padding: 2% 2%;
+}
+
+.cardTitle {
+  padding-bottom: 5%;
+}
+
+.Selector {
+  padding-bottom: 15%;
+}

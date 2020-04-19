@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Button } from "@material-ui/core";
 import axios from "axios";
 
 class DeleteButton extends Component {
@@ -26,13 +27,16 @@ class DeleteButton extends Component {
 
   render() {
     return (
-      <button
+      <Button
+        variant="contained"
+        color="secondary"
+        size="small"
         onClick={() => {
           this.deleteFeedbackSubmission(this.props.id);
         }}
       >
         Delete
-      </button>
+      </Button>
     );
   }
 }

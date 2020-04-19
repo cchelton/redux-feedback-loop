@@ -2,14 +2,19 @@
 //  probably should clear the store on submit
 import React, { Component } from "react";
 import NextButton from "../../../NextButton/NextButton";
+import Typography from "@material-ui/core/Typography";
+import Card from "@material-ui/core/Card";
+import "./PageThanks.css";
 
 class PageThanks extends Component {
   render() {
     return (
-      <div>
-        <h2>Thanks</h2>
-        <NextButton nextPath="/" />
-      </div>
+      <Card className="Card">
+        <Typography variant="h5" className="cardTitle">
+          Thanks for submitting your feedback.
+        </Typography>
+        <NextButton nextPath="/" text="NEW FEEDBACK" />
+      </Card>
     );
   }
 }

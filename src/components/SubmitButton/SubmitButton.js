@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import axios from "axios";
+import Button from "@material-ui/core/Button";
 
 class SubmitButton extends Component {
   postFeedback = () => {
@@ -37,13 +38,15 @@ class SubmitButton extends Component {
     const nextPath = this.props.nextPath;
 
     return (
-      <button
+      <Button
+        variant="contained"
+        color="default"
         onClick={() => {
           this.handleClickNext(nextPath);
         }}
       >
         Submit
-      </button>
+      </Button>
     );
   }
 }

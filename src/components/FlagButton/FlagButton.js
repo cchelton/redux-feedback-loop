@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import { Button } from "@material-ui/core";
+import { Checkbox } from "@material-ui/core";
+import FlagIcon from "@material-ui/icons/Flag";
+import FlagOutlined from "@material-ui/icons/FlagOutlined";
 import axios from "axios";
 
 class FlagButton extends Component {
@@ -25,14 +29,29 @@ class FlagButton extends Component {
   //  RENDER
 
   render() {
+    // return (
+    //   <Button
+    //     variant="contained"
+    //     color="primary"
+    //     size="small"
+    //     onClick={() => {
+    //       this.flagFeedbackSubmission(this.props.id);
+    //     }}
+    //   >
+    //     {this.props.flagged}
+    //   </Button>
+    // );
+
     return (
-      <button
-        onClick={() => {
+      <Checkbox
+        checked={this.props.flagged}
+        icon={<FlagOutlined />}
+        checkedIcon={<FlagIcon />}
+        color="primary"
+        onChange={() => {
           this.flagFeedbackSubmission(this.props.id);
         }}
-      >
-        {this.props.flagged}
-      </button>
+      />
     );
   }
 }
