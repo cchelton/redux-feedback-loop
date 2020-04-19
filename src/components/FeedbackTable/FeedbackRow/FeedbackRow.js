@@ -14,7 +14,7 @@ class FeedbackRow extends Component {
           <FlagButton
             getFeedbackSubmissions={this.props.getFeedbackSubmissions}
             id={this.props.id}
-            flagged={this.props.flagged.toString()}
+            flagged={this.props.flagged}
           />
         </td>
         {/* <td>{this.props.flagged.toString()}</td> */}
