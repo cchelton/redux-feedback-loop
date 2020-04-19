@@ -18,7 +18,12 @@ class NextButton extends Component {
   //  RENDER
 
   render() {
+    let text = "NEXT";
     const nextPath = this.props.nextPath;
+
+    if (this.props.text) {
+      text = this.props.text;
+    }
 
     return (
       <Button
@@ -28,7 +33,7 @@ class NextButton extends Component {
           this.handleClickNext(nextPath);
         }}
       >
-        Next
+        {text}
       </Button>
     );
   }
