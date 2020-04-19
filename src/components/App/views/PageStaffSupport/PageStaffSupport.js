@@ -20,7 +20,7 @@ class PageStaffSupport extends Component {
           />
         </div>
         <NextButton
-          nextPath="./comments"
+          nextPath="/comments"
           pageVal={this.props.store.newFeedbackReducer.support}
         />
       </Card>

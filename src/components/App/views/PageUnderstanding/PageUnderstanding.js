@@ -20,7 +20,7 @@ class PageUnderstanding extends Component {
           />
         </div>
         <NextButton
-          nextPath="./support"
+          nextPath="/support"
           pageVal={this.props.store.newFeedbackReducer.understanding}
         />
       </Card>

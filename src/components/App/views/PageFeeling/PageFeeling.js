@@ -20,7 +20,7 @@ class PageFeeling extends Component {
           />
         </div>
         <NextButton
-          nextPath="./understanding"
+          nextPath="/understanding"
           pageVal={this.props.store.newFeedbackReducer.feeling}
         />
       </Card>

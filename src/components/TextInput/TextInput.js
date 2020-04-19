@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import TextField from "@material-ui/core/TextField";
+import "./TextInput.css";
 
 class TextInput extends Component {
   handleChange = (event) => {
@@ -16,6 +17,7 @@ class TextInput extends Component {
   render() {
     return (
       <TextField
+        className="TextFieldInput"
         label="Comments:"
         multiline
         rowsMax="8"
