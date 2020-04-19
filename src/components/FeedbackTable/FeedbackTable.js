@@ -2,6 +2,13 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import FeedbackRow from "./FeedbackRow/FeedbackRow";
+import TableContainer from "@material-ui/core/TableContainer";
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+import TableCell from "@material-ui/core/TableCell";
+import Paper from "@material-ui/core/Paper";
 
 class FeedbackTable extends Component {
   render() {
@@ -20,20 +27,20 @@ class FeedbackTable extends Component {
       );
     });
     return (
-      <div>
-        <table>
-          <thead>
-            <tr>
-              <th>Feeling</th>
-              <th>Comprehension</th>
-              <th>Support</th>
-              <th>Comments</th>
-              <th>Flagged</th>
-            </tr>
-          </thead>
-          <tbody>{tableRows}</tbody>
-        </table>
-      </div>
+      <TableContainer component={Paper}>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>Feeling</TableCell>
+              <TableCell>Comprehension</TableCell>
+              <TableCell>Support</TableCell>
+              <TableCell>Comments</TableCell>
+              <TableCell>Flagged</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>{tableRows}</TableBody>
+        </Table>
+      </TableContainer>
     );
   }
 }
