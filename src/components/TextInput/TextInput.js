@@ -1,6 +1,7 @@
 // input field for comments
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import TextField from "@material-ui/core/TextField";
 
 class TextInput extends Component {
   handleChange = (event) => {
@@ -14,7 +15,10 @@ class TextInput extends Component {
   };
   render() {
     return (
-      <textarea
+      <TextField
+        label="Comments:"
+        multiline
+        rowsMax="8"
         onChange={this.handleChange}
         value={this.props.store.newFeedbackReducer.comments}
       />
