@@ -9,6 +9,7 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import TableCell from "@material-ui/core/TableCell";
 import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
 
 class FeedbackTable extends Component {
   render() {
@@ -31,11 +32,21 @@ class FeedbackTable extends Component {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>Feeling</TableCell>
-              <TableCell>Comprehension</TableCell>
-              <TableCell>Support</TableCell>
-              <TableCell>Comments</TableCell>
-              <TableCell>Flagged</TableCell>
+              <TableCell>
+                <Typography variant="subtitle1">Feeling</Typography>
+              </TableCell>
+              <TableCell>
+                <Typography variant="subtitle1">Comprehension</Typography>
+              </TableCell>
+              <TableCell>
+                <Typography variant="subtitle1">Support</Typography>
+              </TableCell>
+              <TableCell>
+                <Typography variant="subtitle1">Comments</Typography>
+              </TableCell>
+              <TableCell>
+                <Typography variant="subtitle1">Flagged</Typography>
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>{tableRows}</TableBody>

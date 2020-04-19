@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import axios from "axios";
 import { connect } from "react-redux";
 import FeedbackTable from "../../../FeedbackTable/FeedbackTable";
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
+import "./PageAdmin.css";
 
 class PageAdmin extends Component {
   componentDidMount() {
@@ -34,7 +37,9 @@ class PageAdmin extends Component {
   render() {
     return (
       <div>
-        <h2>ADMIN</h2>
+        <Paper className="HeaderBox">
+          <Typography variant="h5">Feedback Results:</Typography>
+        </Paper>
         <FeedbackTable getFeedbackSubmissions={this.getFeedbackSubmissions} />
       </div>
     );
