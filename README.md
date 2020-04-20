@@ -15,6 +15,7 @@ This app submits a student's daily feedback. Through four views it collects how 
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/en/)
+- [PostgreSQL](https://www.postgresql.org/)
 
 ## Installation
 
